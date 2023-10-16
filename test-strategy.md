@@ -1,0 +1,12 @@
+El primer paso fue verificar que sucede con la pagina.
+Se verifico que fectivamente no tiene funcionalidad.
+Se procedio a inspeccoinar la pagina encontrando el primer error de sintaxis
+addeventListener se corrigio colocando addEventListener que es la sintaxis correcta ademas se revisaron mas lineas y se encontro otra y tambien se corrigio
+Se procedio a seguir con la revision y ahora se encontro un error cuando no se ha definido un div este es de la clase lowOrHi esta estaba mal definida en la seecion de constantes const lowOrHi = document.querySelector('lowOrHi'); tiene que llevar un punto en el queryselector de esta manera const lowOrHi = document.querySelector('.lowOrHi'); esto se corrigio y se continuo la revision.
+Me di cuenta que no estaba relacionando de forma correcta en el menor y mayor, se procedio a corregir los mensajes.
+Segui con mas prruebas solo me dejaba 5 intentos pero estaba facil el cambio, se hizo el cambio en el numero de intentos variable ATTEMPS.
+Pero decidi colocar un control, mostrando la variable random en esta parte se coloco la variable lastResult.textContent = 'Incorrecto! '; de la siguiente manera lastResult.textContent = 'Incorrecto! ' + randomNumber;
+Se procedio a realizar mas pruebas y aqui se detecto que el numero aleatorio se estaba generando incorrectamente en esta parte let randomNumber = Math.random() * 10; se corrigio de la siguiente forma let randomNumber = Math.floor(Math.random() * 100) + 1; esto genera numeros aleatoorios entre 1 y 100. Tambien corregi donde se asignaba nuevamente en el reseteo del juego.
+Con esto quedo solucionado lo de los numeros aleatorios, se siguieron haciendo mas pruebas y se encontro que los mensajes de ganar el juego y perder estaban cruxados se corrigieron.
+Se corrigieron algunos mensajes para que no confundieran al usuario. 'El número ingresado es menor!', 'El número ingresado es mayor!', No te preocupes, te diremos sí el número ingresado es más alto o más bajo, estos mensajes fueron los coregidos.
+Se agrego la parte de los numero decimales ya que no existia esa parte, se coloco la comparacion !Number.isInteger(userGuess) y se convierte el dato ingresado en numero. Se coloco el respectivo mensaje y no se cuenta ese intento.
